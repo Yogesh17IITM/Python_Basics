@@ -32,4 +32,4 @@ Best services provided by anacell, everyone should use anacell"""
 lower_review=review.lower()
 print(lower_review.count("anacell"), lower_review.count("betacellular"),lower_review.count("cetracular"))
 
-#to be updated
+#to be updated..

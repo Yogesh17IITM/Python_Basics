@@ -4,4 +4,6 @@
 
 To cover basic concepts of python
 
-### /<to be added/>
+## To Run:
+
+Python <filename.py>

@@ -29,7 +29,8 @@ review="""Anacell provides the best services in the city,
 betacellular has awesome services,
 Best services provided by anacell, everyone should use anacell"""
 
-lower_review=review.lower()
-print(lower_review.count("anacell"), lower_review.count("betacellular"),lower_review.count("cetracular"))
+lst_keyword=["anacell", "cetracular", "betacellular"]
 
-#to be updated
+lower_review=review.lower()
+print(lower_review.count(lst_keyword[0]), lower_review.count(lst_keyword[1]),lower_review.count(lst_keyword[2]))
+print(lst_keyword[::])

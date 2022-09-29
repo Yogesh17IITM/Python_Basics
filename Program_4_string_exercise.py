@@ -28,15 +28,17 @@ Sample Input and Output:
 import collections
 from operator import itemgetter
 
-def List(dictionary):
-   return list(map(itemgetter(0), dictionary.items()))
-
 lst_review=["Anacell provides the best services in the city",
 "betacellular has awesome services",
 "Best services provided by anacell, everyone should use anacell",]
 
 lst_keyword=["cetracular", "betacellular","anacell"]
 
+# Function to extract only keys from dictionary
+def List(dictionary):
+   return list(map(itemgetter(0), dictionary.items()))
+
+# Create a dictionary from keys
 Dict=dict.fromkeys(lst_keyword, 0)
 
 # Convert all given string into lower case
@@ -58,9 +60,3 @@ sorted_dict = collections.OrderedDict(sorted_lst)
 
 # print only (sorted) keys
 print(List(sorted_dict))
-
-
-
-#lower_review=lst_review[].lower()
-#print(lower_review.count(lst_keyword[0]), lower_review.count(lst_keyword[1]),lower_review.count(lst_keyword[2]))
-#print(lst_keyword[::])

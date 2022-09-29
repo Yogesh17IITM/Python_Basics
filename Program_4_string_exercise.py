@@ -25,12 +25,42 @@ Sample Input and Output:
         Since k=2, first 2 popular keywords printed.
 """
 
-review="""Anacell provides the best services in the city,
-betacellular has awesome services,
-Best services provided by anacell, everyone should use anacell"""
+import collections
+from operator import itemgetter
 
-lst_keyword=["anacell", "cetracular", "betacellular"]
+def List(dictionary):
+   return list(map(itemgetter(0), dictionary.items()))
 
-lower_review=review.lower()
-print(lower_review.count(lst_keyword[0]), lower_review.count(lst_keyword[1]),lower_review.count(lst_keyword[2]))
-print(lst_keyword[::])
+lst_review=["Anacell provides the best services in the city",
+"betacellular has awesome services",
+"Best services provided by anacell, everyone should use anacell",]
+
+lst_keyword=["cetracular", "betacellular","anacell"]
+
+Dict=dict.fromkeys(lst_keyword, 0)
+
+# Convert all given string into lower case
+s=""
+for iStr in lst_review:
+    s += iStr.lower()+"\n"
+
+# count the key occurrences in the review
+for iKey in lst_keyword:
+    Dict[iKey] = s.count(iKey)
+    if Dict[iKey] == 0:
+        del Dict[iKey]
+
+# sort the Dict based on value
+sorted_lst = sorted(Dict.items(), key=lambda x: x[1], reverse=True)
+
+# Converting list into dictionary
+sorted_dict = collections.OrderedDict(sorted_lst)
+
+# print only (sorted) keys
+print(List(sorted_dict))
+
+
+
+#lower_review=lst_review[].lower()
+#print(lower_review.count(lst_keyword[0]), lower_review.count(lst_keyword[1]),lower_review.count(lst_keyword[2]))
+#print(lst_keyword[::])

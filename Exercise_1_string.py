@@ -28,7 +28,7 @@ Sample Input and Output:
 import collections
 from operator import itemgetter
 
-lst_review=["Anacell provides the best services in the city",
+lst_review=["Anacell provides the best services in the city than betacellular",
 "betacellular has awesome services",
 "Best services provided by anacell, everyone should use anacell",]
 

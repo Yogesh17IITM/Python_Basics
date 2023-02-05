@@ -32,4 +32,4 @@ print(type(binary))
 
 # type conversion
 var_a = int(f)  # converting float into int
-print('Var: ' , var_a)
+print('Var: ' , var_a, type(var_a))
